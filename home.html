@@ -8,43 +8,44 @@
     <link rel="stylesheet" href="material/css/styles.css">
     <style>
         body {
-            font-family: 'Arial', sans-serif; /* Default, can be changed */
+            font-family: 'Poppins', sans-serif; /* Modern, rounded font */
             text-align: center;
-            background-color: #f8f0f0; /* Light red background */
-            color: #333; /* Dark gray text */
+            background-color: #fce8e6; /* Very light pink/red */
+            color: #444; /* Dark gray, slightly softer than #333 */
             margin: 0;
             padding: 0;
-            -webkit-font-smoothing: antialiased; /* Smooths fonts on WebKit browsers */
-            -moz-osx-font-smoothing: grayscale; /* Smooths fonts on Firefox */
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
         }
 
         #balance-container {
             margin: 20px;
-            font-size: 18px;
+            font-size: 1.2em; /* Use em for scalable font sizes */
         }
 
         .task-container {
-            margin: 10px auto;
+            margin: 20px auto; /* Increased margin */
             max-width: 600px;
         }
 
         .task {
-            margin: 10px auto;
+            margin: 15px auto; /* Increased margin */
             padding: 20px;
             display: flex;
             align-items: center;
             justify-content: space-between;
             background-color: #fff;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Softer shadow */
-            border-radius: 12px;
-            transition: transform 0.2s ease-in-out; /* Smoother transition */
-            width: 80%;
-            overflow: hidden; /* Prevents content from overflowing rounded corners */
+            box-shadow: 0 6px 10px rgba(0, 0, 0, 0.08); /* Even softer, larger shadow */
+            border-radius: 16px; /* More rounded corners */
+            transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out; /* Transition shadow too */
+            width: 90%; /* Wider tasks */
+            max-width: 550px; /* Maximum width for larger screens */
+            overflow: hidden;
         }
 
         .task:hover {
-            transform: scale(1.02); /* Subtle scale on hover */
-            box-shadow: 0 6px 10px rgba(0, 0, 0, 0.15); /* Slightly larger shadow on hover */
+            transform: scale(1.03);
+            box-shadow: 0 8px 14px rgba(0, 0, 0, 0.12);
         }
 
         .task-detail {
@@ -53,72 +54,80 @@
         }
 
         .task-image img {
-            border-radius: 8px;
-            margin-right: 10px;
-            max-width: 45px; /* Ensure image doesn't exceed container */
+            border-radius: 12px;
+            margin-right: 15px;
+            max-width: 50px;
             height: auto;
         }
 
         .task h4 {
             margin: 0;
-            font-size: 18px;
+            font-size: 1.1em;
             color: #333;
-            font-weight: 500; /* Slightly bolder font */
+            font-weight: 600;
         }
 
         .task-data {
             display: flex;
             align-items: center;
-            margin-top: 8px;
+            margin-top: 10px;
         }
 
         .task-data img {
-            margin-right: 5px;
-            max-width: 20px;
+            margin-right: 8px;
+            max-width: 24px;
             height: auto;
         }
 
         .task-data h5 {
             margin: 0;
-            color: #d9534f; /* A darker shade of red for emphasis */
-            font-size: 18px;
-            font-weight: 600; /* Bolder for emphasis */
+            color: #e64a19; /* Slightly orange-red */
+            font-size: 1.1em;
+            font-weight: 700;
         }
 
         .task-button {
-            background-color: #d9534f; /* Darker red */
+            background-color: #e64a19;
             color: white;
             border: none;
-            padding: 10px 20px;
-            font-size: 16px;
+            padding: 12px 24px;
+            font-size: 1em;
             cursor: pointer;
-            border-radius: 8px;
-            transition: background-color 0.3s ease;
-            box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
+            border-radius: 12px;
+            transition: background-color 0.3s ease, transform 0.2s ease;
+            box-shadow: 2px 2px 6px rgba(0, 0, 0, 0.15); /* Stronger button shadow */
         }
 
         .task-button:hover {
-            background-color: #c9302c; /* Even darker red on hover */
-            box-shadow: 2px 2px 5px rgba(0,0,0,0.2);
+            background-color: #d84315; /* Darker orange-red on hover */
+            transform: scale(1.02); /* Scale on hover */
+            box-shadow: 3px 3px 8px rgba(0,0,0,0.2);
         }
 
-        /* Improved media query */
-        @media (max-width: 500px) { /* More appropriate breakpoint */
+        @media (max-width: 500px) {
             .task {
-                flex-direction: column; /* Stack elements vertically */
-                align-items: stretch; /* Make items take full width */
+                flex-direction: column;
+                align-items: stretch;
+                padding: 15px; /* Adjust padding on smaller screens */
             }
 
             .task-detail {
-                margin-bottom: 10px; /* Add space between elements */
+                margin-bottom: 10px;
             }
-            .task-button{
+
+            .task-button {
                 width: 100%;
+                padding: 10px; /* Adjust padding on smaller screens */
+                font-size: 0.9em;
+            }
+            .task-image img{
+                max-width: 40px;
             }
         }
     </style>
 </head>
 <body>
+
     <div id="balance-container">
         <h2><b></b></h2>
         <span id="balance">0</span> emoji total lrc coin
