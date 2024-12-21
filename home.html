@@ -38,21 +38,7 @@
       box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
       transition: transform 0.3s ease;
       width: 80%;
-      position: relative; /* For speech bubble tail */
-    }
-
-    .task:after {
-      content: "";
-      position: absolute;
-      bottom: 0;
-      left: 20px; /* Adjust position of speech bubble tail */
-      width: 0;
-      height: 0;
-      border: 15px solid transparent;
-      border-bottom-color: #fff; /* White speech bubble tail */
-      border-top: 0;
-      border-left: 0;
-      transition: transform 0.3s ease;
+      text-shadow: 0 1px 2px rgba(0, 0, 0, 0.2); /* Subtle text shadow for smooth edges */
     }
 
     .task:hover {
@@ -128,4 +114,14 @@
 
   <div id="balance-container">
     <h2><b></b></h2>
-    <span
+    <span id="balance">0</span>emoji total lrc coin
+  </div>
+  <br>
+
+  <div class="task-container">
+    <div class="task">
+      <div class="task-detail">
+        <div class="task-image">
+          <img src="material/images/logo.png" width="45px" alt="">
+        </div>
+        <div>
