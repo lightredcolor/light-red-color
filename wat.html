@@ -30,16 +30,36 @@
     </div>
 
     <script src="material/js/w.js"></script>
-    <!-- Go Back Button -->
-    <button id="goBackBtn" class="go-back-button">Go Back</button>
+  <style>
+        /* Style for the Go Back Button */
+        .go-back-button {
+            background-color: #4CAF50;  /* Green background */
+            color: white;               /* White text */
+            border: none;               /* No border */
+            padding: 12px 24px;         /* Padding around the button */
+            font-size: 16px;            /* Font size */
+            cursor: pointer;           /* Pointer cursor on hover */
+            border-radius: 8px;         /* Rounded corners */
+            transition: background-color 0.3s ease, transform 0.2s ease;  /* Smooth transition for hover effect */
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Subtle shadow */
+        }
+            /* Hover effect for the button */
+        .go-back-button:hover {
+            background-color: #45a049;  /* Darker green on hover */
+            transform: scale(1.05);      /* Slightly enlarge the button */
+        }
 
-    <script src="material/js/w.js"></script>
+        /* Optional: Style for when the button is clicked (active state) */
+        .go-back-button:active {
+            background-color: #388e3c;  /* Even darker green when clicked */
+            transform: scale(0.98);     /* Slight shrink effect when clicked */
+        }
 
-    <script>
-        // Function to go back to the previous page in the browser history
-        document.getElementById('goBackBtn').addEventListener('click', function() {
-            window.history.back();  // Go back to the previous page in the browser history
-        });
-    </script>
+        /* Optional: Centering the button */
+        #goBackBtn {
+            display: block;
+            margin: 20px auto;  /* Center horizontally with margin */
+        }
+ </style>
 </body>
 </html>
