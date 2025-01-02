@@ -30,5 +30,17 @@
     </div>
 
     <script src="material/js/w.js"></script>
+    <script>
+        // Intercept the back button and go back to the previous page
+        window.addEventListener('popstate', function(event) {
+            window.history.back();  // Go back to the previous page in the browser history
+        });
+
+        // Prevent default back button behavior by pushing a new state
+        history.pushState(null, null, location.href); // This prevents the default back behavior
+
+        // Optionally, you can push a new state again to simulate navigating forward again.
+        // Once the user presses back, they will be redirected to the previous page.
+    </script>
 </body>
 </html>
