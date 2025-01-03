@@ -1,4 +1,3 @@
-
 let balance = parseInt(localStorage.getItem('balance')) || 0;
 
 function completeTask(reward, taskUrl) {
@@ -8,16 +7,11 @@ function completeTask(reward, taskUrl) {
         return;
     }
 
- 
     balance += reward;
     updateBalance();
 
- 
     localStorage.setItem(taskUrl, 'true');
-
- 
     localStorage.setItem('balance', balance);
-
 
     window.open(taskUrl, '_blank');
 }
