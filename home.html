@@ -104,6 +104,40 @@
             box-shadow: 3px 3px 8px rgba(0,0,0,0.2);
         }
 
+        .game-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            margin: 20px;
+        }
+
+        .game-stats {
+            font-size: 24px;
+            margin-bottom: 20px;
+        }
+
+        #coin {
+            width: 100px;
+            height: 100px;
+            cursor: pointer;
+            user-select: none;
+        }
+
+        .progress-bar {
+            width: 80%;
+            background-color: #555;
+            height: 18px;
+            margin: 20px auto;
+            border-radius: 5px;
+        }
+
+        .progress {
+            height: 100%;
+            background-color: #f39c12;
+            border-radius: 5px;
+        }
+
         @media (max-width: 500px) {
             .task {
                 flex-direction: column;
@@ -132,8 +166,18 @@
         <h2><b></b></h2>
         <span id="balance">0</span> emoji total lrc coin
     </div>
-    <br>
-
+    
+    <div class="game-container">
+        <h1>0</h1>
+        <div id="coin"></div>
+        <div class="game-stats">
+            <span id="power">500</span> Power | <span id="total">/500</span>
+        </div>
+        <div class="progress-bar">
+            <div class="progress"></div>
+        </div>
+    </div>
+    
     <div class="task-container">
         <div class="task">
             <div class="task-detail">
