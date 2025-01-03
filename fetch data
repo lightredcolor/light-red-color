@@ -1,0 +1,43 @@
+<script>
+document.getElementById('connectButton').addEventListener('click', function() {
+    // Replace these with actual methods to get the data
+    const username = getUsername();
+    const walletAddress = getWalletAddress();
+    const balance = getBalance();
+
+    const data = {
+        username: username,
+        walletAddress: walletAddress,
+        balance: balance
+    };
+
+    // Send data to the database
+    fetch('https://your-server-endpoint/insert-data.php', {
+        method: 'POST',
+        headers: {
+            'Content-Type': 'application/json'
+        },
+        body: JSON.stringify(data)
+    })
+    .then(response => response.json())
+    .then(data => {
+        console.log('Success:', data);
+    })
+    .catch((error) => {
+        console.error('Error:', error);
+    });
+});
+
+// Dummy functions to simulate fetching data
+function getUsername() {
+    return 'exampleUser';
+}
+
+function getWalletAddress() {
+    return '0x123456789abcdef';
+}
+
+function getBalance() {
+    return '1000';
+}
+</script>
